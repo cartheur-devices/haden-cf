@@ -1,0 +1,159 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0CA62C4D-1D9E-48B0-A83E-FBD3EA5A72F2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Haden.NxtSharp.CF</RootNamespace>
+    <AssemblyName>Haden.NxtSharp.CF</AssemblyName>
+    <ProjectTypeGuids>{4D628B5B-2FBC-4AA6-8C16-197242AEB884};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PlatformFamilyName>PocketPC</PlatformFamilyName>
+    <PlatformID>4118C335-430C-497f-BE48-11C3316B135E</PlatformID>
+    <OSVersion>5.01</OSVersion>
+    <DeployDirSuffix>Haden.NxtSharp.CF</DeployDirSuffix>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FormFactorID>
+    </FormFactorID>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;$(PlatformFamilyName)</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;$(PlatformFamilyName)</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="NxtBrick.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NxtBrick.Designer.cs">
+      <DependentUpon>NxtBrick.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NxtCommunicator.cs" />
+    <Compile Include="NxtCompassSensor.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NxtCompassSensor.Designer.cs">
+      <DependentUpon>NxtCompassSensor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NxtLightSensor.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NxtLightSensor.Designer.cs">
+      <DependentUpon>NxtLightSensor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NxtMotor.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NxtMotor.Designer.cs">
+      <DependentUpon>NxtMotor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NxtMotorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NxtMotorControl.Designer.cs">
+      <DependentUpon>NxtMotorControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NxtPressureSensor.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NxtPressureSensor.Designer.cs">
+      <DependentUpon>NxtPressureSensor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NxtSensor.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NxtSensor.Designer.cs">
+      <DependentUpon>NxtSensor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NxtSonar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NxtSonar.Designer.cs">
+      <DependentUpon>NxtSonar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NxtSoundSensor.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NxtSoundSensor.Designer.cs">
+      <DependentUpon>NxtSoundSensor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NxtTankControl.cs" />
+    <Compile Include="NxtTankControl.Designer.cs">
+      <DependentUpon>NxtTankControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NxtTankDrive.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NxtTankDrive.Designer.cs">
+      <DependentUpon>NxtTankDrive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="NxtBrick.resx">
+      <DependentUpon>NxtBrick.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NxtMotorControl.resx">
+      <DependentUpon>NxtMotorControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NxtTankControl.resx">
+      <DependentUpon>NxtTankControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Haden.Utilities.CF\Haden.Utilities.CF.csproj">
+      <Project>{108DBF7E-0F02-4743-8155-7D04CA8342E6}</Project>
+      <Name>Haden.Utilities.CF</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Condition="'$(TargetFrameworkVersion)' == 'v1.0'" Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.v1.targets" />
+  <Import Condition="'$(TargetFrameworkVersion)' == 'v2.0'" Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}">
+        <HostingProcess disable="1" />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

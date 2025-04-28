@@ -1,0 +1,28 @@
+
+
+1 May 2010: Stopping at 2101 with a built CF in the form it is now. Need to continue development by testing this app on the Mio.
+
+0003: The first mobile build is stable and will archive before making changes.
+
+2 May 2010: Started at 1002 after working until 147. Will use 32'.Net for Bluetooth control if necessary and have sample projects. Will not create 
+	a CF version of the BluetoothNxt project to test connectivity before deployment in the manner I did for the XP version.
+	
+	Using the onboard BT pairing program, there is a connection to haden on COM0. That the the location to test once the program 
+		is ready.
+		
+	1215: The Mio is not connecting to the nxt, although it does easily on dolores. I think I will have to experiment with 
+		SerialPort in C# CF and set up some communication between dolores and mio. Will come back to 32' then.
+		
+	1226: Have a suitable test project: a chat program desktop to mobile in VB CE4. Needs conversion to C# CE5.
+	
+	1348: The chat clients are running--one XP one CE--all is well save the ddl in CE doesn't pick up the pair with dolores. It 
+		just calls a socket namespace. I think this will need some more work after lunch.
+		
+	1543: Will try the same code on another phone.
+	
+	1553: The chat now works from mobile to XP. Need, though, to change the displayed name on the ddl. I think I will use it 
+		in the Nxt project to insure that connection.
+	
+	1627: Will make a deployment build of the chat client--one for XP and one for CE--for testing purposes. See screenshot 				"BluetoothChat".
+	
+	1702: Deployment completed and two apps doing the communication and not VS. See screenshot "BT-App Chat".
